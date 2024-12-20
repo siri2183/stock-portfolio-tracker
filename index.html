@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio Tracker</h1>
+    </header>
+    <div class="container">
+        <form id="add-stock-form">
+            <input type="text" id="stock-name" placeholder="Stock Name" required>
+            <input type="number" id="stock-quantity" placeholder="Quantity" required>
+            <input type="number" id="stock-price" placeholder="Price per Share" required>
+            <button type="submit">Add Stock</button>
+        </form>
+
+        <table id="portfolio-table">
+            <thead>
+                <tr>
+                    <th>Stock Name</th>
+                    <th>Quantity</th>
+                    <th>Price per Share</th>
+                    <th>Total Value</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div id="dashboard">
+            <div id="total-portfolio-value">
+                Total Portfolio Value: $<span id="portfolio-value">0.00</span>
+            </div>
+            <div id="top-performing-stock">
+                Top-Performing Stock: <span id="top-stock">N/A</span>
+            </div>
+            <div id="portfolio-distribution">
+                Portfolio Distribution:
+                <ul id="distribution-list">
+                    <!-- Distribution will be dynamically displayed here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
